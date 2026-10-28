@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agro-ai"
+version = "0.1.0"
+description = "Per-crop plant disease expert models for an offline Android app"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pillow>=10.0",
+    "numpy>=1.24",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+download = ["kaggle>=1.6"]
+# TensorFlow is preinstalled on Kaggle GPU images; this extra is for other machines.
+train = ["tensorflow>=2.16"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+agro-dataset-factory = "agro_ai.data.factory:main"
+
+[tool.setuptools.packages.find]
+include = ["agro_ai*"]
+
+[tool.setuptools.package-data]
+"agro_ai.config" = ["*.yaml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+build/
+dist/
+
+# Data and model artifacts never go in the repo (it lives in OneDrive).
+data/
+agro-data/
+models/**/*.tflite
+models/**/*.keras
+models/**/saved_model/
+runs/
+
+# Secrets
+kaggle.json
+.env
+
+# Notebooks
+.ipynb_checkpoints/

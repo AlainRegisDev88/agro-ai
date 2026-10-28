@@ -1,0 +1,114 @@
+# Every dataset the factory knows about.
+#
+#   kind:      kaggle_dataset | kaggle_competition | github | local
+#   ref:       Kaggle slug ("owner/name"), competition name, git URL, or local path
+#   adapter:   how samples are read, see agro_ai/data/adapters.py
+#   label_set: which table in class_map.yaml maps this source's raw labels
+#   domain:    lab (clean background) or field (real-world photos); field test
+#              images are what the honest accuracy number is measured on
+#   priority:  when two sources contain the same image, the lower number is kept
+#   enabled:   false = skipped unless named explicitly with --sources
+#
+# Folder layouts and label names were written from the dataset pages and must be
+# confirmed with `python dataset_factory.py --inspect <name>` after download.
+
+sources:
+  cassava_competition:
+    kind: kaggle_competition
+    ref: cassava-leaf-disease-classification
+    adapter: cassava_csv
+    label_set: cassava_competition
+    domain: field
+    priority: 10
+    license: Kaggle competition rules (accept them on kaggle.com before downloading)
+
+  fieldplant:
+    kind: kaggle_dataset
+    ref: manhhoangvan/fieldplant
+    adapter: bbox_crops
+    label_set: fieldplant
+    domain: field
+    priority: 10
+    license: CC BY 4.0 (check dataset page)
+
+  maize_field:
+    kind: kaggle_dataset
+    ref: smaranjitghose/corn-or-maize-leaf-disease-dataset
+    adapter: folder_per_class
+    label_set: maize_field
+    domain: field
+    priority: 20
+    license: see dataset page
+
+  tea_sickness:
+    kind: kaggle_dataset
+    ref: shashwatwork/identifying-disease-in-tea-leafs
+    adapter: folder_per_class
+    label_set: tea_sickness
+    domain: field
+    priority: 20
+    license: see dataset page
+
+  rocole:
+    kind: kaggle_dataset
+    ref: nirmalsankalana/rocole-a-robusta-coffee-leaf-images-dataset
+    adapter: rocole
+    label_set: rocole
+    domain: field
+    priority: 20
+    license: CC BY 4.0 (original RoCoLe release)
+
+  cashew:
+    kind: kaggle_dataset
+    ref: olaidegabriel/cashew-disease-detection-dataset
+    adapter: folder_per_class
+    label_set: cashew
+    domain: field
+    priority: 20
+    license: see dataset page
+
+  plant_diseases_training:
+    kind: kaggle_dataset
+    ref: nirmalsankalana/plant-diseases-training-dataset
+    adapter: folder_per_class
+    label_set: plantvillage
+    domain: lab
+    priority: 40
+    license: see dataset page
+
+  new_plant_diseases:
+    kind: kaggle_dataset
+    ref: vipoooool/new-plant-diseases-dataset
+    adapter: folder_per_class
+    label_set: plantvillage
+    domain: lab
+    priority: 50
+    license: see dataset page (augmented PlantVillage)
+    # Its unlabeled test/ folder shows up as the unmapped label "test" and is dropped.
+    # Byte-identical copies inside the archive are removed by the perceptual-hash dedupe.
+    # exclude_dirs: ["some/relative/dir"]   # optional, any source
+
+  plant_diseases_100k:
+    kind: kaggle_dataset
+    ref: salmasyed1360/plant-diseases-100k-labelled-images
+    adapter: folder_per_class
+    label_set: plantvillage
+    domain: lab
+    priority: 60
+    license: MIT
+
+  plantvillage_github:
+    kind: github
+    ref: https://github.com/spmohanty/plantvillage-dataset.git
+    subdir: raw/color
+    adapter: folder_per_class
+    label_set: plantvillage
+    domain: lab
+    priority: 70
+    license: CC BY-SA 3.0
+    # Same images as the Kaggle copies and a multi-GB clone; only a fallback.
+    enabled: false
+
+  # Not in the current link list. Add once a dataset is chosen:
+  # cocoa_detectdb:   { kind: kaggle_dataset, ref: <owner>/<name>, adapter: folder_per_class, label_set: cocoa, domain: field, priority: 20 }
+  # oil_palm:         { kind: local, ref: D:/datasets/oil-palm, adapter: folder_per_class, label_set: oil_palm, domain: field, priority: 20 }
