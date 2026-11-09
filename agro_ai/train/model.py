@@ -6,13 +6,20 @@ backbone (include_preprocessing=True), so the Android side feeds raw pixels.
 
 from __future__ import annotations
 
+import keras  # standalone package: on Kaggle `tensorflow.keras` resolves to a reduced shim without keras.saving
 import tensorflow as tf
-from tensorflow import keras
 
 IMG_SIZE = 224
 
+# ImageNet weights Keras would otherwise download (impossible on Kaggle with Internet off).
+WEIGHTS_FILE = "weights_mobilenet_v3_large_224_1.0_float_no_top_v2.h5"
+WEIGHTS_URL = "https://storage.googleapis.com/tensorflow/keras-applications/mobilenet_v3/" + WEIGHTS_FILE
 
-@keras.saving.register_keras_serializable(package="agro_ai")
+_saving = getattr(keras, "saving", None)
+register_serializable = getattr(_saving, "register_keras_serializable", None) or keras.utils.register_keras_serializable
+
+
+@register_serializable(package="agro_ai")
 class CoordinateAttention(keras.layers.Layer):
     """Coordinate Attention (Hou et al., CVPR 2021).
 
@@ -62,8 +69,47 @@ def find_backbone(model: keras.Model) -> keras.Model:
     raise ValueError("model has no nested backbone")
 
 
+def _internet_on() -> bool:
+    import socket
+    try:
+        socket.create_connection(("storage.googleapis.com", 443), timeout=5).close()
+        return True
+    except OSError:
+        return False
+
+
+def resolve_imagenet_weights() -> str:
+    """Path to a local copy of the backbone weights, or "imagenet" to let Keras download them.
+
+    Looks in $AGRO_BACKBONE_WEIGHTS, the repo's weights/ folder, the Keras cache,
+    and anywhere under /kaggle/input (e.g. inside the uploaded code zip).
+    """
+    import glob
+    import os
+    from pathlib import Path
+
+    from ..paths import REPO_ROOT
+
+    candidates = [os.environ.get("AGRO_BACKBONE_WEIGHTS", ""),
+                  str(REPO_ROOT / "weights" / WEIGHTS_FILE),
+                  str(Path.home() / ".keras" / "models" / WEIGHTS_FILE)]
+    for depth in range(1, 7):
+        candidates += sorted(glob.glob("/kaggle/input/" + "*/" * depth + WEIGHTS_FILE))
+    for c in candidates:
+        if c and os.path.isfile(c):
+            print(f"[weights] {c}")
+            return c
+    if _internet_on():
+        return "imagenet"
+    raise SystemExit(
+        f"No Internet and no local copy of {WEIGHTS_FILE}. Download it from\n  {WEIGHTS_URL}\n"
+        "put it in the repo's weights/ folder, re-upload the code zip, and run again.")
+
+
 def build_model(num_classes: int, coord_attention: bool = False, dropout: float = 0.2,
                 weights: str | None = "imagenet") -> keras.Model:
+    if weights == "imagenet":
+        weights = resolve_imagenet_weights()
     inputs = keras.Input((IMG_SIZE, IMG_SIZE, 3), name="image")
     backbone = keras.applications.MobileNetV3Large(
         input_shape=(IMG_SIZE, IMG_SIZE, 3), include_top=False, weights=weights,

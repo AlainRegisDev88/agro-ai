@@ -14,6 +14,7 @@ agro-data/
 models/**/*.tflite
 models/**/*.keras
 models/**/saved_model/
+weights/*.h5
 runs/
 
 # Secrets

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agro AI</string>
+
+    <!-- Common actions -->
+    <string name="action_back">Back</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_download">Download</string>
+    <string name="action_got_it">Got it</string>
+    <string name="action_next">Next</string>
+    <string name="action_remove">Remove</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_scan">Scan a leaf</string>
+    <string name="action_see_all">See all</string>
+    <string name="action_share">Share</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_try_again">Try again</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_update">Update</string>
+
+    <!-- Tabs -->
+    <string name="tab_home">Home</string>
+    <string name="tab_history">History</string>
+    <string name="tab_library">Library</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Diagnosis status -->
+    <string name="status_healthy">Healthy</string>
+    <string name="status_disease">Problem found</string>
+    <string name="status_uncertain">Not sure</string>
+
+    <!-- Welcome -->
+    <string name="welcome_1_title">Snap a leaf. Know what\'s wrong.</string>
+    <string name="welcome_1_body">Point your camera at a leaf and Agro AI tells you if your crop is healthy or sick, in seconds.</string>
+    <string name="welcome_2_title">Works without internet</string>
+    <string name="welcome_2_body">Download your crops once. After that, checking leaves works in the field with no signal and no data costs.</string>
+    <string name="welcome_3_title">Know what to do next</string>
+    <string name="welcome_3_body">Every result comes with clear steps to treat the problem and protect the rest of your farm.</string>
+    <string name="welcome_get_started">Get started</string>
+
+    <!-- Choose crops -->
+    <string name="choose_title">What do you grow?</string>
+    <string name="choose_title_short">Your crops</string>
+    <string name="choose_body">Pick your crops. We\'ll download only what you need, so the app stays small.</string>
+    <string name="choose_popular">Popular in East Africa</string>
+    <string name="choose_more">More crops</string>
+    <string name="choose_pick_one">Pick at least one crop</string>
+    <plurals name="choose_continue">
+        <item quantity="one">Continue with %d crop</item>
+        <item quantity="other">Continue with %d crops</item>
+    </plurals>
+
+    <!-- Download models -->
+    <string name="download_title">Getting your crops ready</string>
+    <string name="download_title_short">Download</string>
+    <string name="download_body">Each crop needs a small download once. After that, everything works offline.</string>
+    <string name="download_body_size">About %1$s in total. After this, everything works offline.</string>
+    <string name="download_ready">Ready to use offline</string>
+    <string name="download_progress">Downloading… %1$d%%</string>
+    <string name="download_waiting">Waiting to download</string>
+    <string name="download_waiting_wifi">Waiting for Wi-Fi</string>
+    <string name="download_failed">Download failed</string>
+    <string name="download_not_published">Coming soon for this crop</string>
+    <string name="download_unreachable_title">Can\'t reach the crop library</string>
+    <string name="download_unreachable_body">Check your internet connection and try again. You can also continue and download later from Settings.</string>
+    <string name="download_unreachable_body_demo">Models haven\'t been published yet. In this test build you can still try every screen with sample results.</string>
+    <string name="download_continue_demo">Continue in demo mode</string>
+
+    <!-- Home -->
+    <string name="home_title">Check your crops</string>
+    <string name="home_body">Take a photo of one leaf to find out what\'s wrong.</string>
+    <string name="home_scan_cta">Scan a leaf</string>
+    <string name="home_no_models_title">Download a crop to start</string>
+    <string name="home_no_models_body">Your crops aren\'t downloaded yet. Tap here to get them ready for offline use.</string>
+    <string name="home_demo_title">Demo mode</string>
+    <string name="home_demo_body">No crop models are installed, so scans show sample results. Tap to manage models.</string>
+    <string name="home_update_eyebrow">Update</string>
+    <string name="home_update_title">Better results are ready</string>
+    <string name="home_my_crops">My crops</string>
+    <string name="home_add_crop">Add</string>
+    <string name="home_recent">Recent scans</string>
+    <string name="home_recent_empty_title">No scans yet</string>
+    <string name="home_recent_empty_body">Your scans will show up here so you can check them later.</string>
+    <string name="home_tip_eyebrow">Tip of the day</string>
+    <string name="home_tip_title">Better photos, better answers</string>
+
+    <!-- Scan -->
+    <string name="scan_pick_crop">Which crop is this?</string>
+    <string name="scan_change_crop">Change crop</string>
+    <string name="scan_flash">Flash</string>
+    <string name="scan_gallery">Choose from gallery</string>
+    <string name="scan_capture">Take photo</string>
+    <string name="scan_hint">Fill the square with one leaf</string>
+    <string name="scan_review_title">Check your photo</string>
+    <string name="scan_review_body">Make sure one %1$s leaf fills the square and is sharp and well lit.</string>
+    <string name="scan_retake">Retake</string>
+    <string name="scan_analyze">Check leaf</string>
+    <string name="scan_analyzing_title">Checking…</string>
+    <string name="scan_analyzing_body">Looking closely at your leaf</string>
+    <string name="scan_no_model_title">No crops ready yet</string>
+    <string name="scan_no_model_body">Download at least one crop to start checking leaves.</string>
+    <string name="scan_error_no_model">This crop isn\'t downloaded yet.</string>
+    <string name="scan_error_generic">Something went wrong reading that photo. Try another one.</string>
+    <string name="scan_error_camera">The camera isn\'t available. Try choosing a photo instead.</string>
+
+    <!-- Camera permission -->
+    <string name="permission_title">Allow the camera</string>
+    <string name="permission_body">Agro AI needs the camera to photograph leaves. Photos stay on your phone.</string>
+    <string name="permission_allow">Allow camera</string>
+    <string name="permission_gallery">Use a photo instead</string>
+    <string name="permission_denied_title">Camera is turned off</string>
+    <string name="permission_denied_body">Turn on the camera for Agro AI in your phone\'s settings, or choose a photo from your gallery.</string>
+    <string name="permission_open_settings">Open settings</string>
+
+    <!-- Result -->
+    <string name="result_title">Result</string>
+    <string name="result_confidence">%1$s sure</string>
+    <string name="result_uncertain_title">Not sure</string>
+    <string name="result_uncertain_body">Our best guess is %1$s (%2$s), but that\'s not certain enough. Try another photo.</string>
+    <string name="result_demo_title">Sample result</string>
+    <string name="result_demo_body">No real model is installed for this crop, so this result is made up. Download the crop to get real answers.</string>
+    <string name="result_retake_title">Try a better photo</string>
+    <string name="result_try_again">Take another photo</string>
+    <string name="result_what_to_do">What to do</string>
+    <string name="result_keep_healthy">Keep it healthy</string>
+    <string name="result_no_guidance">Detailed guidance for this condition is coming soon. Ask your local extension officer for advice.</string>
+    <string name="result_learn_more">More about %1$s</string>
+    <string name="result_possibilities">Other possibilities</string>
+    <string name="result_feedback_title">Was this right?</string>
+    <string name="result_feedback_yes">Yes</string>
+    <string name="result_feedback_no">No</string>
+    <string name="result_feedback_thanks">Thanks! This helps us improve.</string>
+    <string name="result_scan_another">Scan another leaf</string>
+    <string name="result_delete_title">Delete this scan?</string>
+    <string name="result_delete_body">The photo and result will be removed from your phone.</string>
+    <string name="share_text">Agro AI check on my %1$s: %2$s (%3$s sure).</string>
+
+    <!-- History -->
+    <string name="history_title">History</string>
+    <string name="history_all">All</string>
+    <string name="history_today">Today</string>
+    <string name="history_yesterday">Yesterday</string>
+    <string name="history_deleted">Scan deleted</string>
+    <string name="history_empty_title">Nothing here yet</string>
+    <string name="history_empty_body">Every leaf you check is saved here, even offline.</string>
+
+    <!-- Library -->
+    <string name="library_title">Library</string>
+    <string name="library_body">Guides for every crop. Works offline.</string>
+    <string name="library_your_crops">Your crops</string>
+    <string name="library_other_crops">Other crops</string>
+    <string name="library_all_crops">All crops</string>
+    <plurals name="library_conditions">
+        <item quantity="one">%d problem covered</item>
+        <item quantity="other">%d problems covered</item>
+    </plurals>
+    <string name="crop_scan">Scan %1$s</string>
+    <string name="crop_install">Download for offline use</string>
+    <string name="crop_problems">Problems</string>
+    <string name="crop_healthy_section">Healthy plant</string>
+    <string name="model_installed">Installed · %1$s</string>
+    <string name="model_downloading">Downloading</string>
+    <string name="model_not_installed">Not downloaded</string>
+
+    <!-- Disease detail -->
+    <string name="disease_symptoms">What you\'ll see</string>
+    <string name="disease_cause">What causes it</string>
+    <string name="disease_treatment">How to treat it</string>
+    <string name="disease_treatment_cultural">On the farm</string>
+    <string name="disease_treatment_organic">Natural options</string>
+    <string name="disease_treatment_chemical">Chemical options</string>
+    <string name="disease_prevention">How to prevent it</string>
+    <string name="disease_care">Good care</string>
+    <string name="disease_get_help">When to get help</string>
+    <string name="disease_coming_soon_title">Guide coming soon</string>
+    <string name="disease_coming_soon_body">We\'re still writing this guide. Ask your local extension officer for advice.</string>
+    <string name="disclaimer">Agro AI gives general guidance and can be wrong. Confirm serious problems with your local agronomist or extension officer before spending money on treatment.</string>
+    <string name="disclaimer_unreviewed">General guidance that hasn\'t been reviewed by an agronomist yet. Confirm with your local extension officer before treating.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_manage_crops">Crops &amp; models</string>
+    <string name="settings_manage_crops_body">Download, update or remove crops</string>
+    <string name="settings_wifi_only">Download on Wi-Fi only</string>
+    <string name="settings_wifi_only_body">Saves your mobile data</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_value">English</string>
+    <string name="settings_language_soon">More languages are coming soon.</string>
+    <string name="settings_storage">Storage</string>
+    <string name="settings_storage_models">Crop models</string>
+    <string name="settings_storage_photos">Scan photos</string>
+    <string name="settings_clear_history">Clear history</string>
+    <string name="settings_clear_title">Clear all history?</string>
+    <string name="settings_clear_body">All scans and their photos will be deleted from your phone. This can\'t be undone.</string>
+    <string name="settings_clear_confirm">Clear history</string>
+    <string name="settings_history_cleared">History cleared</string>
+    <string name="settings_about_section">About</string>
+    <string name="settings_about">About Agro AI</string>
+    <string name="settings_about_body">How it works and how accurate it is</string>
+    <string name="settings_privacy">Privacy</string>
+    <string name="settings_privacy_body">Your photos never leave your phone</string>
+    <string name="settings_version">Version %1$s</string>
+
+    <!-- Manage crops -->
+    <string name="manage_body">Each crop is a small download that works offline. Remove crops you don\'t grow to save space.</string>
+    <string name="manage_add">Add or change crops</string>
+    <string name="manage_empty_title">No crops yet</string>
+    <string name="manage_empty_body">Add the crops you grow to start checking leaves.</string>
+    <string name="manage_accuracy">%1$s accurate</string>
+    <string name="manage_not_downloaded_size">Not downloaded · %1$s</string>
+    <string name="manage_remove_title">Remove %1$s?</string>
+    <string name="manage_remove_body">The crop model will be deleted. Your past scans stay in History.</string>
+
+    <!-- About -->
+    <string name="about_title">A plant doctor in your pocket</string>
+    <string name="about_body">Agro AI checks leaf photos with small models that run on your phone. Nothing is uploaded, and it works without internet.</string>
+    <string name="about_accuracy">How accurate is it?</string>
+    <string name="about_accuracy_body">Measured on real field photos the models never saw during training.</string>
+    <string name="about_no_models">Download a crop to see its accuracy.</string>
+    <string name="about_sources">Trained on</string>
+
+    <!-- Developer (debug builds only) -->
+    <string name="dev_section">Developer</string>
+    <string name="dev_import">Load model from file</string>
+    <string name="dev_import_body">Pick a .tflite file, then its labels.txt</string>
+    <string name="dev_import_pick_crop">Which crop is the model for?</string>
+    <string name="dev_import_done">Model installed</string>
+    <string name="dev_import_failed">Couldn\'t install that model. Check the file and labels match.</string>
+    <string name="dev_gallery">Component gallery</string>
+
+    <string-array name="tips">
+        <item>Take photos in daylight, but out of harsh direct sun. Shade gives the clearest colours.</item>
+        <item>Fill the square with a single leaf. Several leaves at once confuse the check.</item>
+        <item>Pick a leaf that shows the problem clearly, not one that is dead and dry.</item>
+        <item>Hold the phone still and tap the screen to focus before taking the photo.</item>
+        <item>Check a few different plants. One sick leaf doesn\'t always mean a sick field.</item>
+        <item>Remove and destroy badly infected plants early to stop diseases spreading.</item>
+        <item>Clean your tools after working with sick plants so you don\'t carry disease to healthy ones.</item>
+    </string-array>
+
+    <string-array name="retake_tips">
+        <item>Use daylight or shade, not a dark room or harsh sun</item>
+        <item>Get closer so one leaf fills the square</item>
+        <item>Use a plain background, like your hand or the ground</item>
+        <item>Hold steady so the photo is sharp</item>
+    </string-array>
+
+    <string-array name="privacy_points">
+        <item>Leaf photos are checked on your phone. They are never uploaded.</item>
+        <item>Your history is stored only on this phone. Delete it any time.</item>
+        <item>The internet is only used to download crop models and updates.</item>
+        <item>We don\'t ask for your name, phone number or location.</item>
+    </string-array>
+
+    <string-array name="data_sources">
+        <item>Cassava leaf images from Makerere University AI Lab (Uganda)</item>
+        <item>RoCoLe coffee leaf dataset (CC BY 4.0)</item>
+        <item>Tea leaf disease images</item>
+        <item>Cashew disease images</item>
+        <item>Maize field images</item>
+        <item>PlantVillage leaf images (CC BY-SA 3.0)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,1750 @@
+{
+  "cassava__mosaic_disease": {
+    "crop": "cassava",
+    "name": "Mosaic disease",
+    "healthy": false,
+    "summary": "A virus that makes cassava leaves twisted and patchy yellow-green, and can greatly reduce your root harvest.",
+    "symptoms": [
+      "Leaves have a yellow and green mosaic pattern",
+      "Leaves are twisted, curled or smaller than normal",
+      "Plants are stunted and produce fewer, smaller roots"
+    ],
+    "cause": "Cassava mosaic viruses (begomoviruses). They spread through infected stem cuttings and are carried from plant to plant by whiteflies.",
+    "treatment": {
+      "cultural": [
+        "Pull out and destroy infected plants early, especially young ones",
+        "Do not take cuttings from plants with symptoms",
+        "Keep the field free of weeds that host whiteflies"
+      ],
+      "organic": [
+        "There is no cure for infected plants; removing them is the main control"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Plant resistant or tolerant varieties recommended in your area",
+      "Use clean cuttings from healthy plants or certified sources",
+      "Plant early in the rainy season so plants grow strong before whiteflies build up",
+      "Check fields often in the first 3 months and remove sick plants"
+    ],
+    "getHelp": "Contact an extension officer if many plants show symptoms, or to find certified clean planting material and resistant varieties.",
+    "reviewed": false
+  },
+  "cassava__brown_streak_disease": {
+    "crop": "cassava",
+    "name": "Brown streak disease",
+    "healthy": false,
+    "summary": "A virus that causes yellow patches on leaves and brown, rotten areas inside the roots, making them unfit to eat or sell.",
+    "symptoms": [
+      "Yellow patches or blotches along leaf veins, often on older leaves",
+      "Brown streaks or lesions on green stems",
+      "Roots have brown, dry, corky rot inside and may be cracked or shrunken"
+    ],
+    "cause": "Cassava brown streak viruses (CBSV and UCBSV). They spread mainly through infected stem cuttings and also by whiteflies.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected plants as soon as you see symptoms",
+        "Harvest early in affected fields to reduce root damage",
+        "Never use cuttings from fields that had the disease"
+      ],
+      "organic": [
+        "There is no cure for infected plants; removing them is the main control"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Plant tolerant varieties recommended by your local research or extension service",
+      "Use clean, certified cuttings",
+      "Avoid moving cuttings from areas known to have the disease",
+      "Check roots of a few plants at harvest to know if the disease is present"
+    ],
+    "getHelp": "Contact an extension officer if many plants show symptoms, or to find certified clean planting material and resistant varieties.",
+    "reviewed": false
+  },
+  "cassava__bacterial_blight": {
+    "crop": "cassava",
+    "name": "Bacterial blight",
+    "healthy": false,
+    "summary": "A bacterial disease that causes leaf spots, wilting and shoot die-back, and spreads easily through cuttings and rain.",
+    "symptoms": [
+      "Angular, water-soaked spots on leaves that turn brown",
+      "Leaves wilt, dry and fall off",
+      "Sticky gum on stems and shoot tips that die back from the top"
+    ],
+    "cause": "The bacterium Xanthomonas phaseoli pv. manihotis (formerly X. axonopodis pv. manihotis). It spreads through infected cuttings, rain splash, tools and people moving through wet fields.",
+    "treatment": {
+      "cultural": [
+        "Remove and burn badly infected plants and plant debris",
+        "Avoid working in the field when plants are wet",
+        "Clean cutting tools between plants",
+        "Rotate with a non-cassava crop for at least one season"
+      ],
+      "organic": [
+        "No organic spray reliably cures the disease; focus on clean material and sanitation"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Use cuttings only from healthy fields",
+      "Plant resistant or tolerant varieties where available",
+      "Intercropping (for example with maize or legumes) can slow spread"
+    ],
+    "getHelp": "Contact an extension officer if the disease appears in many plants or you need clean planting material.",
+    "reviewed": false
+  },
+  "cassava__green_mottle": {
+    "crop": "cassava",
+    "name": "Green mottle (green mite damage)",
+    "healthy": false,
+    "summary": "Tiny green mites suck the leaves, leaving pale yellow speckles and small leaves, mostly in the dry season.",
+    "symptoms": [
+      "Fine pale yellow speckles or mottling on leaves",
+      "Young leaves at the shoot tip are small and deformed",
+      "In severe cases the shoot tip looks like a bare 'candle stick'"
+    ],
+    "cause": "Feeding by the cassava green mite (Mononychellus tanajoa). Mites spread by wind and on cuttings, and build up during dry weather.",
+    "treatment": {
+      "cultural": [
+        "Plant early so the crop is well established before the dry season",
+        "Remove and destroy badly damaged shoot tips",
+        "Avoid moving cuttings with mites to new fields"
+      ],
+      "organic": [
+        "Protect natural enemies such as predatory mites (for example Typhlodromalus aripo) by avoiding broad-spectrum insecticides"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Plant tolerant varieties, often those with hairy leaves",
+      "Use clean cuttings",
+      "Keep plants healthy with good spacing and soil fertility"
+    ],
+    "getHelp": "Contact an extension officer if damage is severe across the field, as chemical miticides are rarely advised for cassava.",
+    "reviewed": false
+  },
+  "cassava__healthy": {
+    "crop": "cassava",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your cassava looks healthy. Keep up the good work!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Keep using clean cuttings from healthy plants",
+      "Weed regularly, especially in the first 3 months",
+      "Walk your field often and remove any plant with twisted or yellow leaves",
+      "Plant at the start of the rains for strong growth"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "maize__gray_leaf_spot": {
+    "crop": "maize",
+    "name": "Gray leaf spot",
+    "healthy": false,
+    "summary": "A fungal disease that causes long grey rectangular spots on maize leaves and can lower yield in humid weather.",
+    "symptoms": [
+      "Long, narrow, rectangular grey or tan spots between leaf veins",
+      "Spots start on lower leaves and move upward",
+      "Leaves may dry out completely in severe cases"
+    ],
+    "cause": "The fungus Cercospora zeae-maydis. It survives on maize residue and spreads by wind and rain splash in warm, humid weather.",
+    "treatment": {
+      "cultural": [
+        "Rotate with beans, other legumes or other non-cereal crops",
+        "Bury or remove old maize residue after harvest",
+        "Avoid planting too densely so air can move"
+      ],
+      "organic": [
+        "Use well-made compost to keep plants vigorous; no organic spray is known to control it well"
+      ],
+      "chemical": [
+        "If the disease appears before tasselling on a susceptible variety, a fungicide containing azoxystrobin, pyraclostrobin or propiconazole can help",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant or tolerant varieties",
+      "Rotate crops every season",
+      "Do not plant maize after maize in the same field"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "maize__common_rust": {
+    "crop": "maize",
+    "name": "Common rust",
+    "healthy": false,
+    "summary": "A fungal disease that makes small reddish-brown powdery bumps on maize leaves.",
+    "symptoms": [
+      "Small, raised, reddish-brown pustules on both sides of leaves",
+      "Pustules release rusty powder when rubbed",
+      "Heavily infected leaves turn yellow and dry early"
+    ],
+    "cause": "The fungus Puccinia sorghi. Spores are carried by wind, and the disease favours cool, moist weather.",
+    "treatment": {
+      "cultural": [
+        "Remove volunteer maize plants",
+        "Plant at the recommended time for your area",
+        "Keep plants well fed so they tolerate infection"
+      ],
+      "organic": [
+        "No organic spray is known to give reliable control; use resistant varieties"
+      ],
+      "chemical": [
+        "On susceptible varieties with early, heavy infection, a fungicide containing mancozeb, azoxystrobin or a triazole such as propiconazole can be used",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant rust-resistant varieties",
+      "Avoid very late planting",
+      "Check leaves weekly from knee height to tasselling"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "maize__northern_leaf_blight": {
+    "crop": "maize",
+    "name": "Northern leaf blight",
+    "healthy": false,
+    "summary": "A fungal disease that causes long cigar-shaped grey-green spots on maize leaves and can cut yield badly.",
+    "symptoms": [
+      "Long, cigar-shaped grey-green to tan spots on leaves",
+      "Spots often start on lower leaves",
+      "Whole leaves may dry out and look burnt"
+    ],
+    "cause": "The fungus Exserohilum turcicum. It survives on maize residue and spreads by wind and rain in moderate, humid weather.",
+    "treatment": {
+      "cultural": [
+        "Rotate with non-cereal crops such as beans",
+        "Bury or remove infected residue after harvest",
+        "Use recommended plant spacing"
+      ],
+      "organic": [
+        "No organic spray is known to give reliable control; use resistant varieties and rotation"
+      ],
+      "chemical": [
+        "If disease appears before tasselling, a fungicide containing azoxystrobin, propiconazole or mancozeb can be used",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Do not plant maize after maize",
+      "Check fields regularly in wet weather"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "maize__healthy": {
+    "crop": "maize",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your maize looks healthy. Well done!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Rotate maize with beans or other legumes",
+      "Weed early and keep fields clean",
+      "Apply fertiliser or manure as recommended",
+      "Check for fall armyworm and leaf spots every week"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "tea__algal_leaf_spot": {
+    "crop": "tea",
+    "name": "Algal leaf spot",
+    "healthy": false,
+    "summary": "An alga that makes rough, orange-grey round spots on tea leaves, usually on weak or shaded bushes.",
+    "symptoms": [
+      "Round, raised, velvety spots on the upper leaf surface",
+      "Spots are grey-green at first, then orange-brown",
+      "Mostly on older leaves of weak bushes"
+    ],
+    "cause": "The parasitic alga Cephaleuros virescens. It spreads by rain splash in warm, wet weather and attacks stressed bushes.",
+    "treatment": {
+      "cultural": [
+        "Prune to improve air flow and light",
+        "Improve drainage and soil fertility to make bushes stronger",
+        "Remove and destroy heavily spotted leaves"
+      ],
+      "organic": [
+        "Copper-based sprays that are approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A copper fungicide such as copper oxychloride or copper hydroxide can be used on badly affected bushes",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep bushes vigorous with good nutrition",
+      "Avoid too much shade",
+      "Make sure water does not stand in the field"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__anthracnose": {
+    "crop": "tea",
+    "name": "Anthracnose",
+    "healthy": false,
+    "summary": "A fungal disease that causes brown dead patches on tea leaves, often starting from the leaf edge or tip.",
+    "symptoms": [
+      "Brown to dark patches on leaves, often from edges or tips",
+      "Patches may have a yellow border",
+      "Small black dots appear on old patches"
+    ],
+    "cause": "Fungi such as Colletotrichum species. They spread by rain splash and enter through wounds, especially in wet weather.",
+    "treatment": {
+      "cultural": [
+        "Pick and remove infected leaves",
+        "Avoid wounding leaves during plucking",
+        "Prune to improve air movement"
+      ],
+      "organic": [
+        "Maintain healthy bushes with compost and balanced nutrition"
+      ],
+      "chemical": [
+        "A copper fungicide, or another fungicide registered for tea in your country, can be used in wet periods",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Use balanced fertiliser; too much nitrogen can increase disease",
+      "Keep plucking tools clean",
+      "Remove fallen infected leaves"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__bird_eye_spot": {
+    "crop": "tea",
+    "name": "Bird's eye spot",
+    "healthy": false,
+    "summary": "A fungal disease that makes small round spots with a pale centre and dark edge on tea leaves.",
+    "symptoms": [
+      "Small round spots with a grey-white centre and reddish-brown edge",
+      "Spots look like a bird's eye",
+      "Many spots can make leaves yellow and fall"
+    ],
+    "cause": "The fungus Cercospora theae. It spreads by rain splash and wind in wet weather.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy spotted leaves",
+        "Prune to open up the bush",
+        "Improve drainage"
+      ],
+      "organic": [
+        "Keep bushes strong with good nutrition"
+      ],
+      "chemical": [
+        "A copper fungicide can be used if many leaves are affected",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep bushes vigorous",
+      "Avoid overcrowding",
+      "Clean up fallen leaves"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__brown_blight": {
+    "crop": "tea",
+    "name": "Brown blight",
+    "healthy": false,
+    "summary": "A fungal disease that causes large brown patches on mature tea leaves, mostly on stressed bushes.",
+    "symptoms": [
+      "Large, round to irregular brown patches on mature leaves",
+      "Patches have rings and small black dots",
+      "Affected leaves may drop early"
+    ],
+    "cause": "The fungus Colletotrichum camelliae (Glomerella cingulata). It spreads by rain splash and attacks bushes weakened by stress or wounds.",
+    "treatment": {
+      "cultural": [
+        "Remove infected leaves and prunings from the field",
+        "Avoid damaging leaves during plucking",
+        "Improve soil fertility and drainage"
+      ],
+      "organic": [
+        "Strengthen bushes with compost and mulch"
+      ],
+      "chemical": [
+        "A copper fungicide can be used in severe cases",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep bushes healthy and well fed",
+      "Avoid water stress",
+      "Clean up fallen leaves"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__gray_blight": {
+    "crop": "tea",
+    "name": "Grey blight",
+    "healthy": false,
+    "summary": "A fungal disease that makes grey-brown patches with dark rings on older tea leaves.",
+    "symptoms": [
+      "Brown patches on leaves that turn grey in the middle",
+      "Dark rings or bands around the patches",
+      "Small black dots on the grey area"
+    ],
+    "cause": "Fungi such as Pestalotiopsis species. They enter through wounds and spread by rain splash in wet weather.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected leaves",
+        "Avoid wounding bushes during plucking and pruning",
+        "Prune to improve air flow"
+      ],
+      "organic": [
+        "Keep bushes strong with balanced nutrition and mulch"
+      ],
+      "chemical": [
+        "A copper fungicide, or another fungicide registered for tea, can be used in severe outbreaks",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep bushes vigorous",
+      "Handle bushes carefully to avoid wounds",
+      "Remove prunings and fallen leaves"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__red_leaf_spot": {
+    "crop": "tea",
+    "name": "Red leaf spot",
+    "healthy": false,
+    "summary": "Red or reddish-brown spots on tea leaves, usually a fungal leaf spot that worsens on weak bushes.",
+    "symptoms": [
+      "Small red to reddish-brown spots on leaves",
+      "Spots may join to form larger patches",
+      "Affected leaves may yellow and fall"
+    ],
+    "cause": "Usually a fungal leaf spot that spreads by rain splash; the exact fungus can vary, and stress such as poor nutrition makes it worse.",
+    "treatment": {
+      "cultural": [
+        "Remove spotted leaves",
+        "Prune to improve air movement",
+        "Improve soil fertility and drainage"
+      ],
+      "organic": [
+        "Use compost and mulch to keep bushes strong"
+      ],
+      "chemical": [
+        "If spots spread widely, a copper fungicide can be used",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Feed bushes with balanced fertiliser",
+      "Avoid water stress",
+      "Clean up fallen leaves"
+    ],
+    "getHelp": "Ask an extension officer to confirm the cause before spraying, because several problems can make red spots on tea.",
+    "reviewed": false
+  },
+  "tea__white_spot": {
+    "crop": "tea",
+    "name": "White spot",
+    "healthy": false,
+    "summary": "A fungal disease that makes small white or pale spots on young tea leaves and can lower leaf quality.",
+    "symptoms": [
+      "Small white or pale grey spots on young leaves",
+      "Spots may have a dark or reddish edge",
+      "Leaves can become rough and distorted"
+    ],
+    "cause": "A fungal leaf disease that spreads by rain splash in cool, wet weather and attacks young flush.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy spotted leaves",
+        "Prune to improve air flow",
+        "Avoid heavy shade"
+      ],
+      "organic": [
+        "Keep bushes healthy with good nutrition"
+      ],
+      "chemical": [
+        "A copper fungicide can be used during wet periods if many leaves are affected",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep bushes vigorous",
+      "Avoid overcrowding",
+      "Remove fallen leaves"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tea__healthy": {
+    "crop": "tea",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your tea leaves look healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Pluck regularly and carefully to avoid wounding bushes",
+      "Feed bushes with balanced fertiliser or compost",
+      "Prune on time to keep bushes open",
+      "Keep drains clear so water does not stand"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "coffee__leaf_rust": {
+    "crop": "coffee",
+    "name": "Leaf rust",
+    "healthy": false,
+    "summary": "A fungal disease that makes orange powdery spots under coffee leaves and causes them to fall, weakening the tree.",
+    "symptoms": [
+      "Yellow spots on the upper side of leaves",
+      "Orange-yellow powder on the underside of leaves",
+      "Leaves fall early and branches may die back"
+    ],
+    "cause": "The fungus Hemileia vastatrix. Spores spread by wind, rain splash and people, and the disease favours warm, wet weather.",
+    "treatment": {
+      "cultural": [
+        "Prune and stump trees to improve air flow",
+        "Remove suckers and keep shade at the right level",
+        "Feed trees well so they keep their leaves"
+      ],
+      "organic": [
+        "Copper-based sprays approved for organic use can be used where allowed"
+      ],
+      "chemical": [
+        "A copper fungicide (copper hydroxide or copper oxychloride) protects leaves before rust appears",
+        "A triazole fungicide such as cyproconazole or triadimefon can be used when rust is already present",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant rust-resistant varieties recommended in your country",
+      "Spray protectively at the start of the rains if rust is common in your area",
+      "Keep trees vigorous with good nutrition"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "coffee__red_spider_mite": {
+    "crop": "coffee",
+    "name": "Red spider mite",
+    "healthy": false,
+    "summary": "Tiny red mites suck coffee leaves, making them look bronze or rusty, mostly in hot, dry weather.",
+    "symptoms": [
+      "Upper leaf surface looks dull, bronze or rusty",
+      "Very small red mites and fine webbing on the upper side of leaves",
+      "Damaged leaves may fall in severe cases"
+    ],
+    "cause": "The red coffee mite (Oligonychus coffeae). Mites build up in dry weather and after broad-spectrum insecticides kill their natural enemies.",
+    "treatment": {
+      "cultural": [
+        "Mulch and water where possible to reduce drought stress",
+        "Use shade trees to reduce heat stress",
+        "Avoid unnecessary insecticide sprays that kill natural enemies"
+      ],
+      "organic": [
+        "Protect predatory mites and ladybirds by avoiding broad-spectrum sprays",
+        "Neem-based products can reduce mite numbers"
+      ],
+      "chemical": [
+        "Only if damage is severe, use an acaricide registered for coffee, such as sulphur or abamectin where approved",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep trees well watered and mulched in the dry season",
+      "Check leaves with a hand lens in dry weather",
+      "Keep natural enemies alive"
+    ],
+    "getHelp": "Contact an extension officer if mites spread over many trees despite mulching and care.",
+    "reviewed": false
+  },
+  "coffee__healthy": {
+    "crop": "coffee",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your coffee leaves look healthy. Great job!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune and remove suckers regularly",
+      "Mulch around trees to keep soil moist",
+      "Feed trees with manure or fertiliser as recommended",
+      "Check leaves for rust and pests at the start of the rains"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "cashew__anthracnose": {
+    "crop": "cashew",
+    "name": "Anthracnose",
+    "healthy": false,
+    "summary": "A fungal disease that causes dark spots on young cashew leaves, flowers and nuts in wet weather.",
+    "symptoms": [
+      "Dark brown, water-soaked spots on young leaves and shoots",
+      "Flowers and young nuts turn black and drop",
+      "Shoot tips may die back"
+    ],
+    "cause": "The fungus Colletotrichum gloeosporioides. It spreads by rain splash and wind during wet, humid weather.",
+    "treatment": {
+      "cultural": [
+        "Prune dead and infected branches and burn them",
+        "Space trees well and open the canopy",
+        "Remove fallen infected nuts and leaves"
+      ],
+      "organic": [
+        "Copper-based sprays approved for organic use can be used where allowed"
+      ],
+      "chemical": [
+        "A copper fungicide or mancozeb can be sprayed at new flush and flowering in wet weather",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Prune trees each year to improve air flow",
+      "Keep the orchard clean of fallen material",
+      "Use planting material from healthy trees"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "cashew__gummosis": {
+    "crop": "cashew",
+    "name": "Gummosis",
+    "healthy": false,
+    "summary": "A fungal disease that makes cashew trunks and branches ooze gum and can slowly kill the tree.",
+    "symptoms": [
+      "Sticky gum oozes from cracks in the trunk or branches",
+      "Bark under the gum is dark and dead",
+      "Leaves yellow and branches die back"
+    ],
+    "cause": "The fungus Lasiodiplodia theobromae. It enters through wounds and attacks trees under stress.",
+    "treatment": {
+      "cultural": [
+        "Scrape away dead bark and gum down to healthy wood",
+        "Burn the scraped material",
+        "Avoid wounding trunks with tools or fire"
+      ],
+      "organic": [
+        "Cover scraped wounds with a Bordeaux paste (copper sulphate and lime) where allowed"
+      ],
+      "chemical": [
+        "After scraping, paint the wound with a copper fungicide paste",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Avoid injuring trees",
+      "Keep trees healthy with good spacing and care",
+      "Remove dead branches regularly"
+    ],
+    "getHelp": "Contact an extension officer if many trees are oozing gum or trees are dying.",
+    "reviewed": false
+  },
+  "cashew__leaf_miner": {
+    "crop": "cashew",
+    "name": "Leaf miner",
+    "healthy": false,
+    "summary": "A small moth larva tunnels inside young cashew leaves, leaving pale blisters and curled leaves.",
+    "symptoms": [
+      "Silvery or pale blister-like patches on young leaves",
+      "Leaves curl, dry and may fall",
+      "Damage is worst on new flush"
+    ],
+    "cause": "Larvae of the cashew leaf miner moth (Acrocercops syngramma), which lays eggs on young, tender leaves.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy badly mined young leaves",
+        "Prune to encourage even flushing",
+        "Protect natural enemies such as wasps and ants"
+      ],
+      "organic": [
+        "Neem-based sprays on new flush can reduce damage"
+      ],
+      "chemical": [
+        "If damage is heavy on new flush, use an insecticide registered for cashew, such as lambda-cyhalothrin",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Check new flush every week",
+      "Act early when new leaves appear",
+      "Avoid unnecessary sprays that kill natural enemies"
+    ],
+    "getHelp": "Contact an extension officer if most new leaves are damaged each flush.",
+    "reviewed": false
+  },
+  "cashew__red_rust": {
+    "crop": "cashew",
+    "name": "Red rust",
+    "healthy": false,
+    "summary": "An alga that makes rusty orange-red patches on cashew leaves, mostly on old or shaded leaves.",
+    "symptoms": [
+      "Round, raised, rust-coloured patches on leaves",
+      "Patches feel velvety",
+      "Mostly on older leaves in the lower canopy"
+    ],
+    "cause": "The parasitic alga Cephaleuros species. It spreads by rain splash in warm, wet weather.",
+    "treatment": {
+      "cultural": [
+        "Prune to open the canopy and let in light",
+        "Remove heavily affected leaves",
+        "Improve tree nutrition"
+      ],
+      "organic": [
+        "Copper-based sprays approved for organic use can be used where allowed"
+      ],
+      "chemical": [
+        "A copper fungicide such as copper oxychloride can be used if many leaves are affected",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Prune trees each year",
+      "Avoid overcrowding",
+      "Keep trees well fed"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "cashew__healthy": {
+    "crop": "cashew",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your cashew leaves look healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune trees each year to keep the canopy open",
+      "Clear weeds and dry grass to prevent bush fires",
+      "Check new flush for pests every week",
+      "Remove fallen diseased nuts and leaves"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "apple__scab": {
+    "crop": "apple",
+    "name": "Apple scab",
+    "healthy": false,
+    "summary": "A fungal disease that makes dark scabby spots on apple leaves and fruit.",
+    "symptoms": [
+      "Olive-green to black velvety spots on leaves",
+      "Dark, cracked, scabby spots on fruit",
+      "Leaves may yellow and fall early"
+    ],
+    "cause": "The fungus Venturia inaequalis. It survives in fallen leaves and spreads by rain splash and wind in cool, wet weather.",
+    "treatment": {
+      "cultural": [
+        "Rake up and destroy fallen leaves",
+        "Prune to open the tree canopy",
+        "Remove badly infected fruit"
+      ],
+      "organic": [
+        "Sulphur sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as captan or mancozeb from bud break in wet weather",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant scab-resistant varieties",
+      "Keep the orchard floor clean",
+      "Prune each year for good air flow"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "apple__black_rot": {
+    "crop": "apple",
+    "name": "Black rot",
+    "healthy": false,
+    "summary": "A fungal disease that causes purple-edged leaf spots, rotting fruit and cankers on apple branches.",
+    "symptoms": [
+      "Small purple spots on leaves that become brown with a purple edge",
+      "Fruit rot that turns black, often starting at the blossom end",
+      "Sunken cankers on branches"
+    ],
+    "cause": "The fungus Botryosphaeria obtusa. It survives in dead wood, cankers and dried fruit, and spreads by rain splash.",
+    "treatment": {
+      "cultural": [
+        "Prune out dead wood and cankers and burn them",
+        "Remove dried, shrivelled fruit from trees and ground",
+        "Avoid wounding trees"
+      ],
+      "organic": [
+        "Copper or sulphur sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as captan during wet weather",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep trees healthy and free of dead wood",
+      "Clean up fallen fruit",
+      "Prune each year"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "apple__cedar_apple_rust": {
+    "crop": "apple",
+    "name": "Cedar apple rust",
+    "healthy": false,
+    "summary": "A fungal disease that makes bright orange spots on apple leaves; it needs juniper (cedar) trees nearby to survive.",
+    "symptoms": [
+      "Bright yellow-orange spots on the upper side of leaves",
+      "Small tube-like growths under the spots",
+      "Leaves may fall early"
+    ],
+    "cause": "The fungus Gymnosporangium juniperi-virginianae. It alternates between juniper (cedar) trees and apple, and spreads by wind in wet spring weather.",
+    "treatment": {
+      "cultural": [
+        "Remove nearby juniper trees if possible",
+        "Remove galls from junipers before spring",
+        "Rake up fallen apple leaves"
+      ],
+      "organic": [
+        "Sulphur sprays approved for organic use can give some protection where allowed"
+      ],
+      "chemical": [
+        "A fungicide such as myclobutanil from pink bud stage in wet weather",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant apple varieties",
+      "Avoid planting apples near junipers"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "apple__healthy": {
+    "crop": "apple",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your apple tree looks healthy. Nice work!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune each year to open the canopy",
+      "Clean up fallen leaves and fruit",
+      "Water during dry spells and mulch the base",
+      "Check leaves and fruit regularly for spots"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "blueberry__healthy": {
+    "crop": "blueberry",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your blueberry plant looks healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Keep soil acidic and well mulched",
+      "Water regularly, especially when fruiting",
+      "Prune old and weak canes",
+      "Remove fallen leaves and fruit"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "raspberry__healthy": {
+    "crop": "raspberry",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your raspberry plant looks healthy. Well done!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Remove old canes after fruiting",
+      "Keep rows narrow for good air flow",
+      "Mulch and water regularly",
+      "Remove wild brambles nearby that can carry disease"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "soybean__healthy": {
+    "crop": "soybean",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your soybean looks healthy. Good job!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Rotate soybean with maize or other cereals",
+      "Use clean, good-quality seed",
+      "Weed early",
+      "Check leaves for rust and pests regularly"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "cherry__powdery_mildew": {
+    "crop": "cherry",
+    "name": "Powdery mildew",
+    "healthy": false,
+    "summary": "A fungal disease that covers cherry leaves with white powder and can curl young leaves.",
+    "symptoms": [
+      "White, powdery patches on leaves and shoots",
+      "Young leaves curl or pucker",
+      "Fruit may have a light powdery coat"
+    ],
+    "cause": "The fungus Podosphaera clandestina. It spreads by wind and favours warm days, humid nights and shaded, crowded trees.",
+    "treatment": {
+      "cultural": [
+        "Prune to improve air flow and light",
+        "Remove infected shoots",
+        "Avoid too much nitrogen fertiliser"
+      ],
+      "organic": [
+        "Sulphur or potassium bicarbonate sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A fungicide such as myclobutanil or another product registered for cherries",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Prune each year",
+      "Do not overcrowd trees",
+      "Check young leaves often in warm, humid weather"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "cherry__healthy": {
+    "crop": "cherry",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your cherry tree looks healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune each year to keep the canopy open",
+      "Water in dry periods and mulch the base",
+      "Clean up fallen leaves and fruit",
+      "Check for leaf spots and powdery patches"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "grape__black_rot": {
+    "crop": "grape",
+    "name": "Black rot",
+    "healthy": false,
+    "summary": "A fungal disease that causes brown leaf spots and turns grapes into hard black mummies.",
+    "symptoms": [
+      "Round brown spots with dark edges on leaves",
+      "Berries turn brown, then black, hard and shrivelled",
+      "Black dots on spots and shrivelled berries"
+    ],
+    "cause": "The fungus Guignardia bidwellii. It survives in mummified berries and spreads by rain splash in warm, wet weather.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy mummified berries and infected leaves",
+        "Prune for good air flow",
+        "Control weeds under vines"
+      ],
+      "organic": [
+        "Copper or sulphur sprays approved for organic use give some protection where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as mancozeb or captan from early shoot growth to berry set",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Clean up all mummies before the season",
+      "Train and prune vines for an open canopy",
+      "Plant in sunny, well-drained sites"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "grape__esca": {
+    "crop": "grape",
+    "name": "Esca (black measles)",
+    "healthy": false,
+    "summary": "A long-term wood disease of grapevines that causes striped leaves and spotted berries and can kill vines.",
+    "symptoms": [
+      "Leaves with yellow or red stripes between veins that dry out ('tiger stripes')",
+      "Small dark spots on berries",
+      "Dark streaks in the wood when cut; vines may suddenly wilt and die"
+    ],
+    "cause": "A group of wood-rotting fungi (such as Phaeomoniella chlamydospora and Phaeoacremonium species) that enter through pruning wounds.",
+    "treatment": {
+      "cultural": [
+        "Cut out dead and infected wood well below the damage",
+        "Prune in dry weather",
+        "Remove and burn badly affected vines"
+      ],
+      "organic": [
+        "Protect large pruning cuts with a wound sealant"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Use healthy planting material",
+      "Make pruning cuts small and in dry weather",
+      "Protect pruning wounds"
+    ],
+    "getHelp": "Contact an extension officer if many vines show symptoms; there is no spray that cures esca.",
+    "reviewed": false
+  },
+  "grape__leaf_blight": {
+    "crop": "grape",
+    "name": "Leaf blight (Isariopsis leaf spot)",
+    "healthy": false,
+    "summary": "A fungal disease that makes dark brown spots on grape leaves and can cause early leaf drop.",
+    "symptoms": [
+      "Irregular dark brown spots on leaves",
+      "Spots may join and leaves dry out",
+      "Leaves fall early"
+    ],
+    "cause": "The fungus Pseudocercospora vitis (Isariopsis). It spreads by rain splash and wind in warm, humid weather.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected leaves",
+        "Prune for good air flow",
+        "Clean up fallen leaves"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as mancozeb or a copper fungicide",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Keep the canopy open",
+      "Clean up leaves after the season",
+      "Avoid overhead watering"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "grape__healthy": {
+    "crop": "grape",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your grapevine looks healthy. Well done!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune each year for an open canopy",
+      "Remove old berries and leaves after harvest",
+      "Water at the base, not over the leaves",
+      "Check leaves and bunches for spots regularly"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "orange__citrus_greening": {
+    "crop": "orange",
+    "name": "Citrus greening (HLB)",
+    "healthy": false,
+    "summary": "A serious bacterial disease spread by small insects that makes citrus leaves blotchy yellow and fruit small and bitter. There is no cure.",
+    "symptoms": [
+      "Blotchy, uneven yellowing on leaves (not the same on both sides)",
+      "Small, lopsided fruit that stays green and tastes bitter",
+      "Branches die back and the tree declines"
+    ],
+    "cause": "Bacteria (Candidatus Liberibacter species) carried by citrus psyllids, including the African citrus psyllid (Trioza erytreae) and the Asian citrus psyllid (Diaphorina citri), and spread by infected planting material.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected trees to protect healthy ones",
+        "Remove psyllid host plants near the orchard",
+        "Do not move budwood or seedlings from affected areas"
+      ],
+      "organic": [
+        "Protect natural enemies of psyllids such as ladybirds and parasitic wasps"
+      ],
+      "chemical": [
+        "To control psyllids, use an insecticide registered for citrus, such as imidacloprid, especially on new flush",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Buy seedlings only from certified clean nurseries",
+      "Check new flush for psyllids regularly",
+      "Replant with clean trees after removing sick ones"
+    ],
+    "getHelp": "Contact an extension officer as soon as you suspect greening, so it can be confirmed and neighbours warned.",
+    "reviewed": false
+  },
+  "peach__bacterial_spot": {
+    "crop": "peach",
+    "name": "Bacterial spot",
+    "healthy": false,
+    "summary": "A bacterial disease that causes small dark spots and holes in peach leaves and spots on fruit.",
+    "symptoms": [
+      "Small, angular dark spots on leaves",
+      "Spot centres fall out, leaving holes ('shot holes')",
+      "Sunken dark spots or cracks on fruit"
+    ],
+    "cause": "The bacterium Xanthomonas arboricola pv. pruni. It spreads by rain splash and wind in warm, wet weather.",
+    "treatment": {
+      "cultural": [
+        "Prune for good air flow",
+        "Remove badly infected twigs",
+        "Avoid overhead watering"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A copper bactericide such as copper hydroxide, used at low rates to avoid leaf burn",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Keep trees vigorous with balanced fertiliser",
+      "Avoid sites exposed to strong, sandy winds"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "peach__healthy": {
+    "crop": "peach",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your peach tree looks healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Prune each year to open the centre of the tree",
+      "Water in dry spells and mulch",
+      "Clean up fallen leaves and fruit",
+      "Check leaves for spots and curling"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "pepper__bacterial_spot": {
+    "crop": "pepper",
+    "name": "Bacterial spot",
+    "healthy": false,
+    "summary": "A bacterial disease that makes small dark spots on pepper leaves and fruit and causes leaves to fall.",
+    "symptoms": [
+      "Small, water-soaked spots on leaves that turn dark brown",
+      "Leaves turn yellow and drop",
+      "Raised, scabby spots on fruit"
+    ],
+    "cause": "Xanthomonas bacteria. They spread through infected seed and seedlings, rain splash, and handling wet plants.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected plants and debris",
+        "Do not work among plants when they are wet",
+        "Rotate away from pepper and tomato for 2–3 years"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can slow spread where allowed"
+      ],
+      "chemical": [
+        "A copper bactericide, sometimes mixed with mancozeb, applied early",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Use clean, certified seed and healthy seedlings",
+      "Water at the base, not over leaves",
+      "Rotate crops"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "pepper__healthy": {
+    "crop": "pepper",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your pepper plant looks healthy. Great job!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Water at the base of the plant",
+      "Rotate peppers with non-related crops",
+      "Mulch to keep soil off the leaves",
+      "Check leaves regularly for spots and pests"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "potato__early_blight": {
+    "crop": "potato",
+    "name": "Early blight",
+    "healthy": false,
+    "summary": "A fungal disease that makes brown spots with rings on older potato leaves.",
+    "symptoms": [
+      "Brown spots with target-like rings on older leaves",
+      "Yellowing around spots",
+      "Leaves dry and die from the bottom up"
+    ],
+    "cause": "The fungus Alternaria solani. It survives on plant debris and spreads by wind and rain, especially on stressed plants.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected leaves and plant debris",
+        "Rotate away from potato and tomato for 2–3 years",
+        "Keep plants well fed"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as mancozeb or chlorothalonil",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Use certified seed potatoes",
+      "Rotate crops",
+      "Apply balanced fertiliser to avoid plant stress"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "potato__late_blight": {
+    "crop": "potato",
+    "name": "Late blight",
+    "healthy": false,
+    "summary": "A very fast-spreading disease that can destroy a potato field within days in cool, wet weather. Act quickly.",
+    "symptoms": [
+      "Dark, water-soaked patches on leaves that spread fast",
+      "White fuzzy growth under leaves in wet weather",
+      "Brown rot in tubers"
+    ],
+    "cause": "The water mould Phytophthora infestans. It spreads by wind and rain in cool, wet weather, and survives in infected tubers.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected plants immediately",
+        "Earth up (hill) plants well to protect tubers",
+        "Cut and remove haulms 2 weeks before harvest in infected fields"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can protect plants before infection where allowed"
+      ],
+      "chemical": [
+        "A protectant such as mancozeb before disease appears in wet weather",
+        "A systemic product such as metalaxyl plus mancozeb or cymoxanil plus mancozeb when disease is present",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Use certified seed potatoes",
+      "Destroy volunteer potatoes and cull piles",
+      "Spray preventively in cool, wet seasons"
+    ],
+    "getHelp": "Contact an extension officer immediately if late blight spreads, as it can destroy whole fields quickly.",
+    "reviewed": false
+  },
+  "potato__healthy": {
+    "crop": "potato",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your potato plant looks healthy. Keep it up!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Use certified seed potatoes",
+      "Earth up plants to protect tubers",
+      "Rotate potatoes with non-related crops",
+      "Check leaves often in cool, wet weather for blight"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "squash__powdery_mildew": {
+    "crop": "squash",
+    "name": "Powdery mildew",
+    "healthy": false,
+    "summary": "A fungal disease that covers squash and pumpkin leaves with white powder.",
+    "symptoms": [
+      "White, powdery patches on leaves and stems",
+      "Leaves turn yellow, then brown and dry",
+      "Fruit may be small or ripen early"
+    ],
+    "cause": "Fungi such as Podosphaera xanthii. Spores spread by wind, and the disease likes warm, dry days and humid nights.",
+    "treatment": {
+      "cultural": [
+        "Remove badly infected leaves",
+        "Space plants well for air flow",
+        "Avoid too much nitrogen fertiliser"
+      ],
+      "organic": [
+        "Sulphur or potassium bicarbonate sprays approved for organic use where allowed",
+        "A diluted milk spray (about 1 part milk to 9 parts water) may help in early stages"
+      ],
+      "chemical": [
+        "A fungicide such as sulphur or myclobutanil when spots first appear",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Rotate crops",
+      "Check leaves often during warm weather"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "strawberry__leaf_scorch": {
+    "crop": "strawberry",
+    "name": "Leaf scorch",
+    "healthy": false,
+    "summary": "A fungal disease that makes small purple spots on strawberry leaves that can join and make leaves look burnt.",
+    "symptoms": [
+      "Small, dark purple spots on leaves",
+      "Spots join and leaves turn purple-brown and look scorched",
+      "Leaves dry and die"
+    ],
+    "cause": "The fungus Diplocarpon earlianum. It survives on old leaves and spreads by rain splash.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected leaves",
+        "Space plants for good air flow",
+        "Water at the base, not over the leaves"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A fungicide such as captan registered for strawberries",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Renew beds every few years",
+      "Use healthy planting material"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "strawberry__healthy": {
+    "crop": "strawberry",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your strawberry plant looks healthy. Well done!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Mulch to keep fruit off the soil",
+      "Water at the base of plants",
+      "Remove old and dead leaves",
+      "Renew beds every few years"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  },
+  "tomato__bacterial_spot": {
+    "crop": "tomato",
+    "name": "Bacterial spot",
+    "healthy": false,
+    "summary": "A bacterial disease that makes small dark spots on tomato leaves and fruit.",
+    "symptoms": [
+      "Small, dark, water-soaked spots on leaves",
+      "Leaves turn yellow and fall",
+      "Small raised scabby spots on fruit"
+    ],
+    "cause": "Xanthomonas bacteria. They spread through infected seed and seedlings, rain splash, and handling wet plants.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected plants and debris",
+        "Avoid working with wet plants",
+        "Rotate away from tomato and pepper for 2–3 years"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can slow spread where allowed"
+      ],
+      "chemical": [
+        "A copper bactericide, sometimes mixed with mancozeb, applied early",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Use clean, certified seed and healthy seedlings",
+      "Water at the base, not over leaves",
+      "Rotate crops"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tomato__early_blight": {
+    "crop": "tomato",
+    "name": "Early blight",
+    "healthy": false,
+    "summary": "A fungal disease that makes brown spots with rings on older tomato leaves.",
+    "symptoms": [
+      "Brown spots with target-like rings on lower leaves",
+      "Yellowing around spots",
+      "Dark sunken spots near the stem end of fruit"
+    ],
+    "cause": "The fungus Alternaria solani (and related Alternaria species). It survives on debris and spreads by wind and rain splash.",
+    "treatment": {
+      "cultural": [
+        "Remove lower infected leaves",
+        "Stake and prune plants for air flow",
+        "Rotate away from tomato and potato"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed",
+        "Mulch to stop soil splashing onto leaves"
+      ],
+      "chemical": [
+        "A protectant fungicide such as mancozeb or chlorothalonil",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Use healthy seedlings",
+      "Rotate crops",
+      "Water at the base of plants"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tomato__late_blight": {
+    "crop": "tomato",
+    "name": "Late blight",
+    "healthy": false,
+    "summary": "A very fast-spreading disease that can destroy tomato plants within days in cool, wet weather. Act quickly.",
+    "symptoms": [
+      "Large dark, greasy-looking patches on leaves and stems",
+      "White fuzzy growth under leaves in wet weather",
+      "Firm brown patches on fruit"
+    ],
+    "cause": "The water mould Phytophthora infestans. It spreads by wind and rain in cool, wet weather, and often comes from nearby potatoes.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected plants immediately",
+        "Stake and prune for air flow",
+        "Do not grow tomatoes next to potatoes"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can protect plants before infection where allowed"
+      ],
+      "chemical": [
+        "A protectant such as mancozeb or chlorothalonil before disease appears in wet weather",
+        "A systemic product such as metalaxyl plus mancozeb or cymoxanil plus mancozeb when disease is present",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties where available",
+      "Water at the base, not over leaves",
+      "Spray preventively in cool, wet seasons"
+    ],
+    "getHelp": "Contact an extension officer immediately if late blight spreads, as it can destroy whole fields quickly.",
+    "reviewed": false
+  },
+  "tomato__leaf_mold": {
+    "crop": "tomato",
+    "name": "Leaf mould",
+    "healthy": false,
+    "summary": "A fungal disease, common in greenhouses, that makes yellow spots on top of tomato leaves and olive mould underneath.",
+    "symptoms": [
+      "Pale yellow spots on the upper leaf surface",
+      "Olive-green to brown velvety mould under leaves",
+      "Leaves curl, dry and fall"
+    ],
+    "cause": "The fungus Passalora fulva (Fulvia fulva). It thrives in high humidity, especially in greenhouses and tunnels.",
+    "treatment": {
+      "cultural": [
+        "Open greenhouse vents to lower humidity",
+        "Space and prune plants for air flow",
+        "Remove and destroy infected leaves"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A fungicide such as chlorothalonil or mancozeb registered for tomatoes",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Keep greenhouse humidity low",
+      "Water in the morning at the base of plants"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tomato__septoria_leaf_spot": {
+    "crop": "tomato",
+    "name": "Septoria leaf spot",
+    "healthy": false,
+    "summary": "A fungal disease that makes many small round spots with grey centres on tomato leaves.",
+    "symptoms": [
+      "Many small round spots with grey-white centres and dark edges",
+      "Tiny black dots in the centre of spots",
+      "Lower leaves yellow and fall first"
+    ],
+    "cause": "The fungus Septoria lycopersici. It survives on plant debris and spreads by rain splash and wet hands or tools.",
+    "treatment": {
+      "cultural": [
+        "Remove infected lower leaves",
+        "Mulch to stop soil splash",
+        "Rotate away from tomatoes for 2–3 years"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A protectant fungicide such as mancozeb or chlorothalonil",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Remove crop debris after harvest",
+      "Water at the base, not over leaves",
+      "Control nightshade weeds that host the fungus"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tomato__spider_mites": {
+    "crop": "tomato",
+    "name": "Spider mites",
+    "healthy": false,
+    "summary": "Tiny mites suck tomato leaves, making them speckled yellow, with fine webbing in hot, dry weather.",
+    "symptoms": [
+      "Fine yellow or white speckles on leaves",
+      "Fine webbing under leaves and between stems",
+      "Leaves turn bronze, dry and fall"
+    ],
+    "cause": "The two-spotted spider mite (Tetranychus urticae). It builds up in hot, dry, dusty conditions and after sprays that kill natural enemies.",
+    "treatment": {
+      "cultural": [
+        "Remove badly infested leaves",
+        "Water plants well and reduce dust",
+        "Avoid broad-spectrum insecticides that kill natural enemies"
+      ],
+      "organic": [
+        "Spray the undersides of leaves with water to knock mites off",
+        "Neem oil or insecticidal soap sprays"
+      ],
+      "chemical": [
+        "An acaricide such as abamectin or spiromesifen; alternate products to avoid resistance",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Check undersides of leaves in hot, dry weather",
+      "Keep plants well watered",
+      "Control weeds that host mites"
+    ],
+    "getHelp": "Contact an extension officer if mites keep coming back after treatment.",
+    "reviewed": false
+  },
+  "tomato__target_spot": {
+    "crop": "tomato",
+    "name": "Target spot",
+    "healthy": false,
+    "summary": "A fungal disease that makes brown spots with rings on tomato leaves and can spread to fruit.",
+    "symptoms": [
+      "Brown spots with light centres and target-like rings on leaves",
+      "Spots may join and leaves die",
+      "Sunken brown spots on fruit"
+    ],
+    "cause": "The fungus Corynespora cassiicola. It spreads by wind and rain splash in warm, humid weather.",
+    "treatment": {
+      "cultural": [
+        "Remove and destroy infected leaves and debris",
+        "Stake and prune for air flow",
+        "Rotate crops"
+      ],
+      "organic": [
+        "Copper sprays approved for organic use can help where allowed"
+      ],
+      "chemical": [
+        "A fungicide such as chlorothalonil or mancozeb",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Avoid overhead watering",
+      "Remove crop debris after harvest",
+      "Do not plant too closely"
+    ],
+    "getHelp": "Contact an extension officer if the disease spreads quickly, keeps returning after treatment, or you are unsure which product is approved in your area.",
+    "reviewed": false
+  },
+  "tomato__yellow_leaf_curl_virus": {
+    "crop": "tomato",
+    "name": "Yellow leaf curl virus",
+    "healthy": false,
+    "summary": "A virus spread by whiteflies that makes tomato leaves small, yellow and curled and stops plants from fruiting well. There is no cure.",
+    "symptoms": [
+      "Leaves are small, curled upward and yellow at the edges",
+      "Plants are stunted and bushy",
+      "Flowers drop and few fruit form"
+    ],
+    "cause": "Tomato yellow leaf curl virus, spread by whiteflies (Bemisia tabaci). It does not spread through touch or seed.",
+    "treatment": {
+      "cultural": [
+        "Pull out and destroy infected plants early",
+        "Control weeds that host whiteflies",
+        "Do not plant new tomatoes next to old infected fields"
+      ],
+      "organic": [
+        "Yellow sticky traps to catch whiteflies",
+        "Neem-based sprays to reduce whiteflies"
+      ],
+      "chemical": [
+        "To control whiteflies, use an insecticide registered for tomatoes, such as acetamiprid or spirotetramat; alternate products to avoid resistance",
+        "Follow the label and local regulations, and wear protective gear when spraying."
+      ]
+    },
+    "prevention": [
+      "Plant resistant varieties",
+      "Raise seedlings under insect-proof net",
+      "Leave a break period with no tomatoes between seasons"
+    ],
+    "getHelp": "Contact an extension officer if many plants show symptoms, or to find certified clean planting material and resistant varieties.",
+    "reviewed": false
+  },
+  "tomato__mosaic_virus": {
+    "crop": "tomato",
+    "name": "Mosaic virus",
+    "healthy": false,
+    "summary": "A virus that makes tomato leaves mottled light and dark green and spreads easily on hands and tools. There is no cure.",
+    "symptoms": [
+      "Light and dark green mottled pattern on leaves",
+      "Leaves are distorted or fern-like",
+      "Plants are stunted and fruit may ripen unevenly"
+    ],
+    "cause": "Tomato mosaic virus. It spreads by touch, tools, clothing and infected seed, and survives a long time in plant debris.",
+    "treatment": {
+      "cultural": [
+        "Pull out and destroy infected plants",
+        "Wash hands with soap and clean tools after handling sick plants",
+        "Do not smoke or handle tobacco near plants"
+      ],
+      "organic": [
+        "There is no cure; focus on removing sick plants and hygiene"
+      ],
+      "chemical": []
+    },
+    "prevention": [
+      "Use certified, clean seed and resistant varieties",
+      "Rotate crops and remove old plant debris",
+      "Handle healthy plants before sick ones"
+    ],
+    "getHelp": "Contact an extension officer if many plants show symptoms, or to find certified clean planting material and resistant varieties.",
+    "reviewed": false
+  },
+  "tomato__healthy": {
+    "crop": "tomato",
+    "name": "Healthy",
+    "healthy": true,
+    "summary": "Your tomato plant looks healthy. Great work!",
+    "symptoms": [],
+    "cause": "",
+    "treatment": {
+      "cultural": [],
+      "organic": [],
+      "chemical": []
+    },
+    "prevention": [
+      "Stake and prune plants for good air flow",
+      "Water at the base, not over the leaves",
+      "Mulch to stop soil splashing on leaves",
+      "Rotate tomatoes with non-related crops"
+    ],
+    "getHelp": "If you see spots, yellowing, wilting or pests spreading on many plants, take a sample to your extension officer.",
+    "reviewed": false
+  }
+}

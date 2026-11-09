@@ -65,8 +65,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--seed", type=int, default=42)
     args = p.parse_args(argv)
 
+    import keras
     import tensorflow as tf
-    from tensorflow import keras
 
     from .model import build_model, find_backbone, unfreeze_top
 

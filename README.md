@@ -132,6 +132,21 @@ file sizes, sha256, which variant is recommended, measured accuracy).
   normalization: it happens inside the model.
 - Output `[1, num_classes]` float32 softmax, in the order of `labels`.
 
+## Publishing models
+
+The app downloads models from the latest GitHub release
+(`releases/latest/download/<basename>`): `manifest.json` first, then each
+`files[].path` by its basename, checked against its sha256. To build the release folder:
+
+```bash
+python -m agro_ai.export.publish --models models --out dist/release
+```
+
+This copies the newest version of each model (int8, fp16, labels) flat into
+`dist/release/`, writes their manifest entries unchanged to `dist/release/manifest.json`,
+fails on a sha256 mismatch or a basename clash, and prints the `gh release create`
+command to run. It does not upload anything.
+
 ## Tests
 
 ```bash
