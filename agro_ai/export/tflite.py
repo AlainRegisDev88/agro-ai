@@ -21,7 +21,7 @@ from pathlib import Path
 import numpy as np
 
 from ..train.dataset import Item, load_uint8, read_manifests, split
-from ..train.metrics import classification_report
+from ..train.metrics import classification_report, headline_accuracy
 from .manifest import INPUT_SPEC, display_name, file_entry, update_manifest
 
 REPRESENTATIVE_SAMPLES = 300
@@ -144,7 +144,7 @@ def export_run(run_dir: Path, data_dirs: list[Path], max_int8_drop: float = 2.0,
 
     metrics_path = run_dir / "metrics.json"
     metrics = json.loads(metrics_path.read_text(encoding="utf-8")) if metrics_path.exists() else {}
-    keras_acc = (metrics.get("keras", {}).get(eval_split) or {}).get("accuracy")
+    keras_acc = headline_accuracy(metrics.get("keras", {}).get(eval_split) or {})
     tflite_metrics: dict[str, dict] = {}
     for variant, path in files.items():
         print(f"[export] evaluating {path.name} on {len(eval_items)} {eval_split} images")
@@ -157,12 +157,16 @@ def export_run(run_dir: Path, data_dirs: list[Path], max_int8_drop: float = 2.0,
             tflite_metrics[variant] = {"error": str(exc)}
             continue
         tflite_metrics[variant] = m
-        print(f"         accuracy={m['accuracy']:.4f} macro_f1={m['macro_f1']:.4f} "
+        extra = ""
+        if "accuracy_known" in m:
+            extra = (f"real-leaf accuracy={m['accuracy_known']:.4f} unknown caught={m['unknown_recall'] or 0:.4f} "
+                     f"leaves rejected as unknown={m['known_called_unknown']:.4f} ")
+        print(f"         accuracy={m['accuracy']:.4f} {extra}macro_f1={m['macro_f1']:.4f} "
               f"size={path.stat().st_size / 1e6:.1f} MB xnnpack={'yes' if m['xnnpack'] else 'no'}")
     metrics["tflite"] = {"split": eval_split, **tflite_metrics}
 
     recommended = "int8"
-    int8_acc = tflite_metrics["int8"].get("accuracy")
+    int8_acc = headline_accuracy(tflite_metrics["int8"]) if "error" not in tflite_metrics["int8"] else None
     if int8_acc is None:
         recommended = "fp16"
         print(f"!!! WARNING: INT8 model unusable; recommending FP16 for {name} {version}.", flush=True)
@@ -180,7 +184,7 @@ def export_run(run_dir: Path, data_dirs: list[Path], max_int8_drop: float = 2.0,
     for v in ("int8", "fp16"):
         entry_file = file_entry(files[v], v, _input_dtype(files[v]), models_root)
         entry_file["xnnpack"] = tflite_metrics[v].get("xnnpack")  # false: app must disable XNNPACK for it
-        entry_file["accuracy"] = tflite_metrics[v].get("accuracy")
+        entry_file["accuracy"] = headline_accuracy(tflite_metrics[v]) if "error" not in tflite_metrics[v] else None
         file_entries.append(entry_file)
 
     test_domains = sorted({i.domain for i in eval_items})
@@ -199,7 +203,9 @@ def export_run(run_dir: Path, data_dirs: list[Path], max_int8_drop: float = 2.0,
             "eval_domains": test_domains,
             "keras_accuracy": keras_acc,
             "int8_accuracy": int8_acc,
-            "fp16_accuracy": tflite_metrics["fp16"]["accuracy"],
+            "fp16_accuracy": headline_accuracy(tflite_metrics["fp16"]),
+            "fp16_unknown_recall": tflite_metrics["fp16"].get("unknown_recall"),
+            "fp16_known_called_unknown": tflite_metrics["fp16"].get("known_called_unknown"),
             "int8_macro_f1": tflite_metrics["int8"].get("macro_f1"),
             "fp16_macro_f1": tflite_metrics["fp16"]["macro_f1"],
         },

@@ -1,7 +1,8 @@
 """Where data and models live.
 
-The repository sits inside OneDrive, so tens of GB of images must never be
-written under it. Everything heavy goes to AGRO_DATA_DIR instead.
+Tens of GB of images must never be written inside the repository. Everything
+heavy goes to AGRO_DATA_DIR instead, which by default is the `agro-data`
+folder next to the repo (C:/Code/Agro-AI-Project/agro-data on the dev PC).
 """
 
 from __future__ import annotations
@@ -25,9 +26,7 @@ def data_dir(override: str | os.PathLike | None = None) -> Path:
         return Path(env)
     if on_kaggle():
         return Path("/kaggle/working/agro-data")
-    if os.name == "nt":
-        return Path("C:/agro-data")
-    return Path.home() / "agro-data"
+    return REPO_ROOT.parent / "agro-data"
 
 
 def raw_dir(root: Path) -> Path:

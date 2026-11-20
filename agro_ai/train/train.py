@@ -26,10 +26,16 @@ from .dataset import class_weights, make_dataset, read_manifests, split
 from .metrics import classification_report
 
 
-def next_version_dir(root: Path, name: str) -> Path:
+def next_version_dir(root: Path, name: str, version: int | None = None) -> Path:
+    """models/<name>/v<N>: the given version, or one above the highest one present.
+    On Kaggle the models folder starts empty, so pass --version for a retrain."""
     base = root / name
-    versions = [int(m.group(1)) for p in base.glob("v*") if (m := re.fullmatch(r"v(\d+)", p.name))]
-    out = base / f"v{max(versions, default=0) + 1}"
+    if version is None:
+        versions = [int(m.group(1)) for p in base.glob("v*") if (m := re.fullmatch(r"v(\d+)", p.name))]
+        version = max(versions, default=0) + 1
+    out = base / f"v{version}"
+    if out.exists():
+        raise SystemExit(f"{out} already exists; pick another --version")
     out.mkdir(parents=True)
     return out
 
@@ -63,6 +69,8 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--no-export", action="store_true")
     p.add_argument("--max-int8-drop", type=float, default=2.0, help="accuracy points INT8 may lose vs Keras")
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--version", type=int, help="model version to write (default: next free one); "
+                   "must be higher than the published one or phones won't update")
     args = p.parse_args(argv)
 
     import keras
@@ -85,7 +93,7 @@ def main(argv: list[str] | None = None) -> int:
     if not train_items or not val_items:
         raise SystemExit("need non-empty train and val splits")
 
-    run_dir = next_version_dir(models_dir(args.models_dir), name)
+    run_dir = next_version_dir(models_dir(args.models_dir), name, args.version)
     print(f"[run] {run_dir}")
     train_ds = make_dataset(train_items, labels, args.batch, training=True,
                             label_smoothing=args.label_smoothing, seed=args.seed)
@@ -144,7 +152,7 @@ def main(argv: list[str] | None = None) -> int:
     (run_dir / "train_config.json").write_text(json.dumps(config, indent=2), encoding="utf-8")
     (run_dir / "metrics.json").write_text(json.dumps(metrics, indent=2), encoding="utf-8")
     test = metrics["keras"]["test"] or metrics["keras"]["val"]
-    print(f"[keras] test accuracy={test['accuracy']:.4f} macro_f1={test['macro_f1']:.4f} (n={test['n']})")
+    print(f"[keras] test accuracy={test['accuracy']:.4f} " + (f"real-leaf accuracy={test['accuracy_known']:.4f} " if "accuracy_known" in test else "") + f"macro_f1={test['macro_f1']:.4f} (n={test['n']})")
 
     if not args.no_export:
         from ..export.tflite import export_run

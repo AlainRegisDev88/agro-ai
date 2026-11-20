@@ -119,6 +119,9 @@
     <string name="result_title">Result</string>
     <string name="result_confidence">%1$s sure</string>
     <string name="result_uncertain_title">Not sure</string>
+    <string name="result_not_recognized_title">Not a %1$s leaf?</string>
+    <string name="result_not_recognized_body">This photo doesn\'t look like a %1$s leaf, so we can\'t check it for disease. Take a close photo of a single leaf.</string>
+    <string name="label_not_recognized">Not recognised</string>
     <string name="result_uncertain_body">Our best guess is %1$s (%2$s), but that\'s not certain enough. Try another photo.</string>
     <string name="result_demo_title">Sample result</string>
     <string name="result_demo_body">No real model is installed for this crop, so this result is made up. Download the crop to get real answers.</string>

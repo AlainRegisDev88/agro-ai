@@ -53,3 +53,28 @@ def test_read_manifests_merges_dirs(tmp_path):
     assert labels == ["potato__late_blight", "tomato__healthy"]
     assert len(items) == 4
     assert class_weights(items, labels) == {0: 1.0, 1: 1.0}
+
+
+def test_accuracy_known_excludes_the_unknown_class():
+    from agro_ai.train.metrics import classification_report, headline_accuracy
+    labels = ["maize__healthy", "maize__rust", "maize__unknown"]
+    # 4 real leaves: 2 right, 1 wrong disease, 1 rejected as unknown; 4 unknowns, 3 caught
+    y_true = [0, 1, 1, 0, 2, 2, 2, 2]
+    y_pred = [0, 1, 0, 2, 2, 2, 2, 0]
+    r = classification_report(y_true, y_pred, labels)
+    assert r["accuracy"] == 5 / 8
+    assert r["accuracy_known"] == 2 / 4
+    assert r["unknown_recall"] == 3 / 4
+    assert r["known_called_unknown"] == 1 / 4
+    assert headline_accuracy(r) == 0.5
+    plain = classification_report([0, 1], [0, 0], labels[:2])
+    assert "accuracy_known" not in plain and headline_accuracy(plain) == 0.5
+
+
+def test_next_version_dir_explicit(tmp_path):
+    import pytest
+    from agro_ai.train.train import next_version_dir
+    assert next_version_dir(tmp_path, "maize", 2).name == "v2"
+    assert next_version_dir(tmp_path, "maize").name == "v3"
+    with pytest.raises(SystemExit):
+        next_version_dir(tmp_path, "maize", 2)

@@ -3,6 +3,8 @@ package com.agroai.app
 import com.agroai.app.ml.Diagnosis
 import com.agroai.app.ml.DiagnosisStatus
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertFalse
+import org.junit.Assert.assertTrue
 import org.junit.Test
 
 class DiagnosisTest {
@@ -33,6 +35,27 @@ class DiagnosisTest {
     fun nearTieIsUncertain() {
         // Above MIN_CONFIDENCE but the margin over the runner-up is too small.
         assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.56f, 0.44f, 0f))))
+    }
+
+    @Test
+    fun shakyGuessIsNowUncertain() {
+        // Was accepted under the old 0.55 threshold; too weak to show a diagnosis.
+        assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.62f, 0.2f, 0.18f))))
+    }
+
+    @Test
+    fun confidenceBoundaryIsSeventyPercent() {
+        assertEquals(DiagnosisStatus.Disease, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.70f, 0.0f, 0.30f))))
+        assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.69f, 0.0f, 0.31f))))
+    }
+
+    @Test
+    fun unknownTopIsNotRecognized() {
+        val withUnknown = labels + "cassava__unknown"
+        val ranked = Diagnosis.rank(withUnknown, floatArrayOf(0.05f, 0.03f, 0.02f, 0.9f))
+        assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(ranked))
+        assertTrue(Diagnosis.notRecognized(ranked))
+        assertFalse(Diagnosis.notRecognized(Diagnosis.rank(labels, floatArrayOf(0.9f, 0.05f, 0.05f))))
     }
 
     @Test
