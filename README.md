@@ -9,7 +9,10 @@ This repo holds the Python side:
 1. **`dataset_factory.py`**: pulls the configured Kaggle/GitHub datasets, maps every
    raw label to a canonical `crop__condition`, validates, center-crops and
    resizes images to 224x224, removes duplicates, and writes one stratified
-   train/val/test set per crop.
+   train/val/test set per crop. Every crop also gets a `<crop>__unknown` class
+   (other crops' leaves, weeds, scenes, objects from sources with a `negatives`
+   cap) so the app can say "this isn't a maize leaf" instead of guessing a
+   disease. Its reported accuracy is measured on real leaves only.
 2. **`agro_ai.train.train`**: MobileNetV3-Large transfer learning (optional
    Coordinate Attention), with field-style augmentation.
 3. **`agro_ai.export.tflite`**: FP16 and full-INT8 TFLite export, accuracy check of
@@ -17,11 +20,11 @@ This repo holds the Python side:
 
 ## Where things are written
 
-The repo lives in OneDrive, so images and models are written somewhere else:
+Images are never written inside the repo; they go to an `agro-data` folder next to it:
 
 | What | Default | Override |
 |---|---|---|
-| raw downloads, processed images | `C:/agro-data` (Kaggle: `/kaggle/working/agro-data`) | `AGRO_DATA_DIR` or `--data-dir` |
+| raw downloads, processed images | `../agro-data`, beside the repo (Kaggle: `/kaggle/working/agro-data`) | `AGRO_DATA_DIR` or `--data-dir` |
 | trained models, `manifest.json` | `./models` (Kaggle: `/kaggle/working/models`) | `AGRO_MODELS_DIR` or `--models-dir` |
 
 ## Setup

@@ -46,6 +46,7 @@ import com.agroai.app.data.history.Scan
 import com.agroai.app.data.history.isDemo
 import com.agroai.app.data.history.status
 import com.agroai.app.data.history.top
+import com.agroai.app.ml.Diagnosis
 import com.agroai.app.ml.DiagnosisStatus
 import com.agroai.app.ui.components.AgroBottomSheet
 import com.agroai.app.ui.components.AgroCard
@@ -110,6 +111,8 @@ fun ResultScreen(
         }
         val s = scan ?: return@Column
         val status = s.status
+        val notRecognized = Diagnosis.notRecognized(s.top)
+        val cropName = vm.content.cropName(s.crop)
         val info = vm.content.disease(s.label)
         val colors = statusColors(status)
 
@@ -137,14 +140,19 @@ fun ResultScreen(
                     )
                     Spacer(Modifier.height(Space.xs))
                     Text(
-                        if (status == DiagnosisStatus.Uncertain) stringResource(R.string.result_uncertain_title) else info.name,
+                        when {
+                            notRecognized -> stringResource(R.string.result_not_recognized_title, cropName)
+                            status == DiagnosisStatus.Uncertain -> stringResource(R.string.result_uncertain_title)
+                            else -> info.name
+                        },
                         style = AgroTheme.type.displayXl,
                         color = colors.onHero,
                     )
                     Spacer(Modifier.height(Space.sm))
                     Text(
-                        when (status) {
-                            DiagnosisStatus.Uncertain -> stringResource(R.string.result_uncertain_body, info.name, percent(s.confidence))
+                        when {
+                            notRecognized -> stringResource(R.string.result_not_recognized_body, cropName.lowercase())
+                            status == DiagnosisStatus.Uncertain -> stringResource(R.string.result_uncertain_body, info.name, percent(s.confidence))
                             else -> info.summary.ifBlank { stringResource(R.string.result_confidence, percent(s.confidence)) }
                         },
                         style = AgroTheme.type.bodyMd,
@@ -202,7 +210,8 @@ fun ResultScreen(
                     Text(stringResource(R.string.result_possibilities), style = AgroTheme.type.displaySm, color = c.ink)
                     Spacer(Modifier.height(Space.md))
                     Column(verticalArrangement = Arrangement.spacedBy(Space.md)) {
-                        s.top.forEachIndexed { i, score ->
+                        // "Not recognized" is said in the hero card; the bars list real conditions only.
+                        s.top.filterNot { Diagnosis.isUnknown(it.label) }.forEachIndexed { i, score ->
                             ConfidenceBar(
                                 vm.content.name(score.label),
                                 score.score,

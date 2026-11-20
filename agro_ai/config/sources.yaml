@@ -8,6 +8,10 @@
 #              images are what the honest accuracy number is measured on
 #   priority:  when two sources contain the same image, the lower number is kept
 #   enabled:   false = skipped unless named explicitly with --sources
+#   negatives: up to this many of the source's images go into every OTHER crop's
+#              "<crop>__unknown" class (leaves of other crops, weeds, scenes), so
+#              each expert learns to say "this isn't my crop's leaf". A source
+#              used only for negatives is never downloaded: on Kaggle, attach it.
 #
 # Folder layouts and label names were written from the dataset pages and must be
 # confirmed with `python dataset_factory.py --inspect <name>` after download.
@@ -20,6 +24,7 @@ sources:
     label_set: cassava_competition
     domain: field
     priority: 10
+    negatives: 400
     license: Kaggle competition rules (accept them on kaggle.com before downloading)
 
   fieldplant:
@@ -38,6 +43,7 @@ sources:
     label_set: maize_field
     domain: field
     priority: 20
+    negatives: 300
     license: see dataset page
 
   tea_sickness:
@@ -47,6 +53,7 @@ sources:
     label_set: tea_sickness
     domain: field
     priority: 20
+    negatives: 300
     license: see dataset page
 
   rocole:
@@ -56,6 +63,7 @@ sources:
     label_set: rocole
     domain: field
     priority: 20
+    negatives: 300
     license: CC BY 4.0 (original RoCoLe release)
 
   cashew:
@@ -65,6 +73,7 @@ sources:
     label_set: cashew
     domain: field
     priority: 20
+    negatives: 300
     license: see dataset page
 
   plant_diseases_training:
@@ -74,6 +83,7 @@ sources:
     label_set: plantvillage
     domain: lab
     priority: 40
+    negatives: 600
     license: see dataset page
 
   new_plant_diseases:
@@ -83,6 +93,7 @@ sources:
     label_set: plantvillage
     domain: lab
     priority: 50
+    negatives: 600
     license: see dataset page (augmented PlantVillage)
     # Its unlabeled test/ folder shows up as the unmapped label "test" and is dropped.
     # Byte-identical copies inside the archive are removed by the perceptual-hash dedupe.
@@ -95,6 +106,7 @@ sources:
     label_set: plantvillage
     domain: lab
     priority: 60
+    negatives: 600
     license: MIT
 
   plantvillage_github:
@@ -108,6 +120,37 @@ sources:
     license: CC BY-SA 3.0
     # Same images as the Kaggle copies and a multi-GB clone; only a fallback.
     enabled: false
+
+  # Negatives only: no crop of their own, they feed every crop's "unknown" class.
+  plant_seedlings:
+    kind: kaggle_dataset
+    ref: vbookshelf/v2-plant-seedlings-dataset
+    adapter: folder_per_class
+    label_set: plant_seedlings
+    domain: field
+    priority: 80
+    negatives: 700
+    license: see dataset page (Aarhus University plant seedlings)
+
+  intel_scenes:
+    kind: kaggle_dataset
+    ref: puneet6060/intel-image-classification
+    adapter: folder_per_class
+    label_set: intel_scenes
+    domain: field
+    priority: 80
+    negatives: 400
+    license: see dataset page
+
+  natural_images:
+    kind: kaggle_dataset
+    ref: prasunroy/natural-images
+    adapter: folder_per_class
+    label_set: natural_images
+    domain: field
+    priority: 80
+    negatives: 400
+    license: see dataset page
 
   # Not in the current link list. Add once a dataset is chosen:
   # cocoa_detectdb:   { kind: kaggle_dataset, ref: <owner>/<name>, adapter: folder_per_class, label_set: cocoa, domain: field, priority: 20 }

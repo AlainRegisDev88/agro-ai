@@ -6,6 +6,8 @@
 #
 # Values are "<crop>__<condition>". The part before "__" decides which crop
 # expert the image goes to. A value of null drops the label on purpose.
+# The crop "none" is reserved for negatives-only images (weeds, scenes, objects):
+# they never form an expert of their own, they only feed "<crop>__unknown".
 # Labels missing from a table are dropped too, but listed in report.json and
 # by --inspect so nothing disappears silently.
 
@@ -106,3 +108,38 @@ cashew:
 # e.g.  cassava_mosaic: cassava__mosaic_disease
 #       corn_blight:    maize__northern_leaf_blight
 fieldplant: {}
+
+# Negatives-only sources (see "negatives" in sources.yaml).
+plant_seedlings:
+  black_grass: none__weed
+  charlock: none__weed
+  cleavers: none__weed
+  common_chickweed: none__weed
+  common_wheat: none__other_crop
+  fat_hen: none__weed
+  loose_silky_bent: none__weed
+  maize: null            # maize seedlings: real maize, so never "unknown" for the maize expert
+  scentless_mayweed: none__weed
+  shepherds_purse: none__weed
+  shepherd_s_purse: none__weed
+  small_flowered_cranesbill: none__weed
+  sugar_beet: none__other_crop
+
+intel_scenes:
+  buildings: none__scene
+  forest: none__scene
+  glacier: none__scene
+  mountain: none__scene
+  sea: none__scene
+  street: none__scene
+  seg_pred: null          # unlabeled folder
+
+natural_images:
+  airplane: none__object
+  car: none__object
+  cat: none__animal
+  dog: none__animal
+  flower: none__plant
+  fruit: none__object
+  motorbike: none__object
+  person: none__person

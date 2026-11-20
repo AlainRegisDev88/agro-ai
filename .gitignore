@@ -8,8 +8,8 @@ venv/
 build/
 dist/
 
-# Data and model artifacts never go in the repo (it lives in OneDrive).
-data/
+# Data and model artifacts never go in the repo.
+/data/
 agro-data/
 models/**/*.tflite
 models/**/*.keras

@@ -88,3 +88,75 @@ def test_end_to_end_with_local_sources(tmp_path, image_factory):
     # second run reuses processed images and gives identical output
     run(["maize"], data_root=out, workers=1, sources_path=sources_path)
     assert list(csv.DictReader((crop_dir / "manifest.csv").open(encoding="utf-8"))) == rows
+
+
+def _negatives_setup(tmp_path, image_factory, with_scenes=True):
+    for i in range(10):
+        image_factory(f"coffee/healthy/{i}.jpg", seed=i)
+        image_factory(f"coffee/rust/{i}.jpg", seed=50 + i)
+        image_factory(f"pv/Tomato___healthy/{i}.jpg", seed=100 + i)
+        image_factory(f"pv/Potato___Late_blight/{i}.jpg", seed=150 + i)
+    sources = {"sources": {
+        "coffee_src": {"kind": "local", "ref": str(tmp_path / "coffee"), "adapter": "folder_per_class",
+                       "label_set": "rocole", "domain": "field", "priority": 20},
+        "pv_src": {"kind": "local", "ref": str(tmp_path / "pv"), "adapter": "folder_per_class",
+                   "label_set": "plantvillage", "domain": "lab", "priority": 50, "negatives": 6},
+    }}
+    if with_scenes:
+        for i in range(10):
+            image_factory(f"scenes/street/{i}.jpg", seed=300 + i)
+        sources["sources"]["scene_src"] = {
+            "kind": "local", "ref": str(tmp_path / "scenes"), "adapter": "folder_per_class",
+            "label_set": "intel_scenes", "domain": "field", "priority": 80, "negatives": 4}
+    path = tmp_path / "sources.yaml"
+    path.write_text(yaml.safe_dump(sources))
+    return path
+
+
+def test_unknown_class_comes_from_other_crops_and_negative_sources(tmp_path, image_factory):
+    sources_path = _negatives_setup(tmp_path, image_factory)
+    reports = run(["coffee"], data_root=tmp_path / "data", workers=1, sources_path=sources_path)
+
+    crop_dir = tmp_path / "data" / "processed" / "coffee"
+    rows = list(csv.DictReader((crop_dir / "manifest.csv").open(encoding="utf-8")))
+    assert {r["label"] for r in rows} == {"coffee__healthy", "coffee__leaf_rust", "coffee__unknown"}
+    unknown = [r for r in rows if r["label"] == "coffee__unknown"]
+    assert Counter(r["source"] for r in unknown) == {"pv_src": 6, "scene_src": 4}
+    # spread over the other crops' labels, not all from one class
+    originals = {r["original"].replace("\\", "/").split("/")[-2] for r in unknown if r["source"] == "pv_src"}
+    assert originals == {"Tomato___healthy", "Potato___Late_blight"}
+    # negatives-only sources never become an expert of their own, nor do the other crops
+    assert set(reports) == {"coffee"}
+    assert not (tmp_path / "data" / "processed" / "none").exists()
+    assert reports["coffee"]["sources"]["pv_src"]["negatives"] == {"coffee": 6}
+
+
+def test_own_crop_is_never_unknown(tmp_path, image_factory):
+    sources_path = _negatives_setup(tmp_path, image_factory, with_scenes=False)
+    run(["tomato"], data_root=tmp_path / "data", workers=1, sources_path=sources_path)
+    rows = list(csv.DictReader((tmp_path / "data/processed/tomato/manifest.csv").open(encoding="utf-8")))
+    unknown = [r for r in rows if r["label"] == "tomato__unknown"]
+    assert len(unknown) == 6
+    assert all("Tomato" not in r["original"] for r in unknown)
+    # coffee_src has no negatives cap, so it is not even read for tomato
+    assert all(r["source"] == "pv_src" for r in rows)
+
+
+def test_no_negatives_flag_and_missing_negative_source(tmp_path, image_factory):
+    sources_path = _negatives_setup(tmp_path, image_factory)
+    run(["coffee"], data_root=tmp_path / "a", workers=1, sources_path=sources_path, negatives=False)
+    labels = (tmp_path / "a/processed/coffee/labels.txt").read_text().split()
+    assert labels == ["coffee__healthy", "coffee__leaf_rust"]
+
+    # a missing negatives-only source is skipped, never fatal and never downloaded
+    shutil.rmtree(tmp_path / "scenes")
+    reports = run(["coffee"], data_root=tmp_path / "b", workers=1, sources_path=sources_path)
+    assert "scene_src" in reports["coffee"]["sources_skipped"]
+    assert reports["coffee"]["classes"]["coffee__unknown"]
+
+
+def test_none_is_not_a_crop(tmp_path, image_factory):
+    import pytest
+    sources_path = _negatives_setup(tmp_path, image_factory)
+    with pytest.raises(SystemExit):
+        run(["none"], data_root=tmp_path / "data", workers=1, sources_path=sources_path)
