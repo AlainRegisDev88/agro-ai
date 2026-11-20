@@ -15,7 +15,11 @@ object Diagnosis {
      */
     const val MIN_CONFIDENCE = 0.70f
 
-    /** A near tie between the top two is just as unreliable as a low top score. */
+    /**
+     * A near tie between the top two is just as unreliable as a low top score.
+     * With MIN_CONFIDENCE at 0.70 the runner-up is at most 0.30, so this only bites
+     * if MIN_CONFIDENCE is ever lowered below 0.625; it is kept as that safeguard.
+     */
     const val MIN_MARGIN = 0.25f
 
     fun isHealthy(label: String): Boolean = label.endsWith("__healthy")

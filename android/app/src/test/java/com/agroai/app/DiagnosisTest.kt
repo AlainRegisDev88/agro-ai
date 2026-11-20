@@ -44,8 +44,9 @@ class DiagnosisTest {
     }
 
     @Test
-    fun clearWinnerBelowOldMarginIsUncertain() {
-        assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.72f, 0.0f, 0.28f))))
+    fun confidenceBoundaryIsSeventyPercent() {
+        assertEquals(DiagnosisStatus.Disease, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.70f, 0.0f, 0.30f))))
+        assertEquals(DiagnosisStatus.Uncertain, Diagnosis.status(Diagnosis.rank(labels, floatArrayOf(0.69f, 0.0f, 0.31f))))
     }
 
     @Test
