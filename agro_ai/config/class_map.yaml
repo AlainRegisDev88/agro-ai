@@ -94,6 +94,11 @@ rocole:
   rust_level_4: coffee__leaf_rust
   rust: coffee__leaf_rust
   red_spider_mite: coffee__red_spider_mite
+  # The Kaggle copy (nirmalsankalana/rocole-...) uses PlantVillage-style folder names,
+  # confirmed with --inspect on 2026-11-20: 791 healthy, 602 rust, 167 red spider mite.
+  coffee_healthy: coffee__healthy
+  coffee_rust: coffee__leaf_rust
+  coffee_red_spider_mite: coffee__red_spider_mite
 
 cashew:
   anthracnose: cashew__anthracnose
